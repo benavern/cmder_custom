@@ -1,3 +1,5 @@
+local gitutil = require('gitutil')
+
 -- Source: https://github.com/AmrEldib/cmder-powerline-prompt 
 
 local arrowSymbol = ""
@@ -180,7 +182,7 @@ function colorful_git_prompt_filter()
     local git_dir = get_git_dir()
     if git_dir then
         -- if we're inside of git repo then try to detect current branch
-        local branch = get_git_branch(git_dir)
+        local branch = gitutil.get_git_branch(git_dir)
         if branch then
             -- Has branch => therefore it is a git folder, now figure out status
             if get_git_status() then
@@ -213,7 +215,7 @@ function colorful_env_prompt_filter()
     
     local git_dir = get_git_dir()
     if git_dir then
-        local branch = get_git_branch(git_dir)
+        local branch = gitutil.get_git_branch(git_dir)
         if branch then
             -- Has branch => therefore it is a git folder, now figure out status
             if get_git_status() then
