@@ -17,3 +17,7 @@ I use `monofur for powerline` font from [powerline fonts](https://github.com/pow
 
 * copy & paste the .lua files in %cmder_root%/config
 * restart cmder
+
+## Tips
+
+Add to vscode: https://github.com/microsoft/vscode/issues/12006#issuecomment-315539390
